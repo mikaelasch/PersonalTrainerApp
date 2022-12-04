@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Customers from './components/Customers'
 import Trainings from './components/Trainings';
+import Calendar from './components/Calendar'
 import Tabs from '@mui/material/Tabs'
 import Tab  from '@mui/material/Tab';
 import './App.css';
@@ -30,11 +31,12 @@ function App() {
       <Tabs value={value} onChange={handleChange}>
           <Tab value='one' label='Customers'></Tab>
           <Tab value='two' label='Trainings'></Tab>
+          <Tab value='three' label='Calendar'></Tab>
       </Tabs>
       </AppBar>
         {value === 'one' && <div> <Customers/></div>}
         {value === 'two' && <div><Trainings/></div>}
-    
+        {value === 'three' && <div><Calendar/></div>}
     </div>
   );
 }
