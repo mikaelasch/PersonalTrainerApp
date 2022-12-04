@@ -22,18 +22,18 @@ export default function Calendar(){
         <div>
             <Typography variant='h3'>
              Calendar
-          </Typography>
+            </Typography>
             <FullCalendar
-        plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView="dayGridMonth"
-        headerToolbar={{
-            center: 'dayGridMonth,timeGridWeek,timeGridDay',
-          }}
+                plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                initialView="dayGridMonth"
+                headerToolbar={{
+                center: 'dayGridMonth,timeGridWeek,timeGridDay',
+                 }}
          
-        events={trainings.map((training) => {
-            const calendar = {};
-            calendar.date = training.date;
-            calendar.title = [
+            events={trainings.map((training) => {
+                const calendar = {};
+                calendar.date = training.date;
+                calendar.title = [
                 training.activity + ': ' +
                 training.customer.firstname + ' ' +
                 training.customer.lastname
